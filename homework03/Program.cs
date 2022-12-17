@@ -1,67 +1,76 @@
-﻿/*Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
-Например, даны 2 матрицы:
-2 4 | 3 4
-3 2 | 3 3
-Результирующая матрица будет:
-18 20
-15 18
-*/
-Console.WriteLine("Введите размер первой матрицы:");
-int[,] a = new int[Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine())];
-for (i = 0; i < a.GetLength(0); i++)
-{
-    for (j = 0; j < a.GetLength(1); j++)
-    {
-        Console.Write("a[{i}, {j}] = ", i, j);
-        a[i, j] = Convert.ToInt32(Console.ReadLine());
-    }
-    Console.WriteLine();
-}
-Console.WriteLine("Введите размер второй матрицы:");
-int[,] b = new int[Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine())];
-for (i = 0; i < b.GetLength(0); i++)
-{
-    for (j = 0; j < a.GetLength(1); j++)
-    {
-        Console.Write("b[{i}, {j}] = ", i, j);
-        a[i, j] = Convert.ToInt32(Console.ReadLine());
-    }
-    Console.WriteLine();
-}
+﻿// Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+// Например, даны 2 матрицы:
+// 2 4 | 3 4
+// 3 2 | 3 3
+// Результирующая матрица будет:
+// 18 20
+// 15 18
 
-Console.WriteLine("Матрица b:");
-Print(a);
-Console.WriteLine("Матрица b:");
-Print(a);
-  Console.WriteLine("Матрица c = a * b:");
-int[,] c = Multiplication(a, b);
-Print(c);
-/*}
-else
+int rows = ReadInt("Введите количество строк: ");
+int columns = ReadInt("Введите количество столбцов: ");
+int[,] array = new int[rows, columns];
+int[,] secondArray = new int[rows, columns];
+int[,] resultArray = new int[rows, columns];
+
+FillArrayRandom(array);
+PrintArray2D(array);
+
+Console.WriteLine();
+
+FillArrayRandom(secondArray);
+PrintArray2D(secondArray);
+
+Console.WriteLine();
+
+if (array.GetLength(0) != secondArray.GetLength(1))
 {
-    int[,] c = new int[m, q];
-    for (i = 0; i < m; i++)
+    Console.WriteLine(" Нельзя перемножить ");
+    return;
+}
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    for (int j = 0; j < secondArray.GetLength(1); j++)
     {
-        for (j = 0; j < q; j++)
+        resultArray[i, j] = 0;
+        for (int k = 0; k < array.GetLength(1); k++)
         {
-            c[i, j] = 0;
-            for (int k = 0; k < n; k++)
-            {
-                c[i, j] += a[i, k] * b[k, j];
-            }
+            resultArray[i, j] += array[i, k] * secondArray[k, j];
         }
     }
-    Console.WriteLine("Произведение двух матриц равно :");
-    for (i = 0; i < m; i++)
+}
+
+PrintArray2D(resultArray);
+
+
+
+// Функция ввода
+int ReadInt(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+// Функция заполнения массива рандомными числами от 1 до 9
+void FillArrayRandom(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (j = 0; j < n; j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write(c[i, j] + "\t");
+            array[i, j] = new Random().Next(1, 10);
+        }
+    }
+}
+
+// Функция вывода двумерного массива в терминал 
+void PrintArray2D(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write($"{array[i, j]} ");
         }
         Console.WriteLine();
     }
 }
-*/
-
-
-

@@ -1,36 +1,36 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net6.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\antik\\.nuget\\packages\\": {}
+    "C:\\Users\\voir7\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\antik\\Documents\\Homework8\\homework03\\homework03.csproj",
+      "projectUniqueName": "D:\\владимир\\документы\\Homework8\\Homework8\\homework03\\homework03.csproj",
       "projectName": "homework03",
-      "projectPath": "D:\\Users\\antik\\Documents\\Homework8\\homework03\\homework03.csproj",
-      "packagesPath": "C:\\Users\\antik\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\antik\\Documents\\Homework8\\homework03\\obj\\",
+      "projectPath": "D:\\владимир\\документы\\Homework8\\Homework8\\homework03\\homework03.csproj",
+      "packagesPath": "C:\\Users\\voir7\\.nuget\\packages\\",
+      "outputPath": "D:\\владимир\\документы\\Homework8\\Homework8\\homework03\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\antik\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\voir7\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net7.0"
+        "net6.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {}
         }
       },
@@ -41,8 +41,8 @@
       }
     },
     "frameworks": {
-      "net7.0": {
-        "targetAlias": "net7.0",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "imports": [
           "net461",
           "net462",
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
